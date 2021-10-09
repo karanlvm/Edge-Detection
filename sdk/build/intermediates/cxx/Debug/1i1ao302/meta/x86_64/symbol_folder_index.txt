@@ -1,1 +1,0 @@
-C:\Users\karan\AndroidStudioProjects\CompVis\sdk\build\intermediates\cxx\Debug\1i1ao302\obj\x86_64
