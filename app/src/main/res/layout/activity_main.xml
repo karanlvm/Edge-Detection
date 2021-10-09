@@ -16,7 +16,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/edge_button"
+        android:id="@+id/pro_button"
         android:text="Processed Output"
         android:layout_below="@+id/camera_button"
         />

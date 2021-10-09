@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/karan/Documents/GitHub/Computer-Vision/app/src/main/res/layout-port/camera_layout.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/karan/Documents/GitHub/Computer-Vision/app/src/main/res/layout/activity_camera.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/karan/Documents/GitHub/Computer-Vision/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/karan/Documents/GitHub/Computer-Vision/app/src/main/res/layout/activity_processed.xml" value="0.12760416666666666" />
       </map>
     </option>
   </component>
