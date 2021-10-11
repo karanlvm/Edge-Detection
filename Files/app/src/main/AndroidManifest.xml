@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".RawActivity"
             android:exported="true"/>
+        <activity android:name=".ProActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

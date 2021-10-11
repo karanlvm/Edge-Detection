@@ -15,9 +15,11 @@ import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.JavaCameraView;
 import org.opencv.android.OpenCVLoader;
+import org.opencv.core.CvType;
 import org.opencv.core.Mat;
+import org.opencv.imgproc.Imgproc;
 
-public class RawActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2 {
+public class ProActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2 {
 
     private static String TAG = "CamActivity";
     private final int PERMISSIONS_READ_CAMERA=1;
@@ -25,11 +27,13 @@ public class RawActivity extends AppCompatActivity implements CameraBridgeViewBa
 
     CameraBridgeViewBase cameraBridgeViewBase;
     BaseLoaderCallback baseLoaderCallback;
+    private Mat mRgba;
+    private Mat mGray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_raw);
+        setContentView(R.layout.activity_pro);
 
 
         cameraBridgeViewBase = (JavaCameraView)findViewById(R.id.CameraView);
@@ -60,7 +64,8 @@ public class RawActivity extends AppCompatActivity implements CameraBridgeViewBa
 
     @Override
     public void onCameraViewStarted(int width, int height) {
-
+        mRgba=new Mat(height,width, CvType.CV_8UC4);
+        mGray =new Mat(height,width, CvType.CV_8UC1);
     }
 
     @Override
@@ -70,8 +75,14 @@ public class RawActivity extends AppCompatActivity implements CameraBridgeViewBa
 
     @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
-        Mat frame = inputFrame.rgba();
-        return frame;
+        mRgba=inputFrame.rgba();
+        mGray=inputFrame.gray();
+
+        Mat edges =  new Mat();
+
+        Imgproc.Canny(mRgba,edges,80,200);
+
+        return edges;
     }
 
     @Override
