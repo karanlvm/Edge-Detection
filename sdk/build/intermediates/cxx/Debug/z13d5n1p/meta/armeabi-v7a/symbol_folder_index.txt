@@ -1,1 +1,0 @@
-C:\Users\karan\AndroidStudioProjects\ComputerVision\sdk\build\intermediates\cxx\Debug\z13d5n1p\obj\armeabi-v7a

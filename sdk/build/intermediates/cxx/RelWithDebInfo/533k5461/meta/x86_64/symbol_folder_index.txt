@@ -1,1 +1,0 @@
-C:\Users\karan\AndroidStudioProjects\ComputerVision\sdk\build\intermediates\cxx\RelWithDebInfo\533k5461\obj\x86_64
